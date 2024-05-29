@@ -89,7 +89,7 @@
 		<h2>POINT DU JOUR</h2><br><br>
 		<div class="re">
 		<label>NOM IMPRIMANTE:</label>
-		<select name="codFil" class="be">
+		<select name="nom" class="be">
 				<?php 
 					$reponse = $bdd->query('SELECT nomimp FROM imprimante');
                      	while ($donnee = $reponse->fetch())
@@ -112,16 +112,16 @@
 		</div><br><br>
 		<div class="re">
 		<label>Compt photocopie blanc noir:</label>
-		<input type="text" name="phbn" class="be" required></div><br><br>
+		<input type="number" name="phbn" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Compt photocopie couleur:</label>
-		<input type="text" name="phc" class="be" required></div><br><br>
+		<input type="number" name="phc" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Compt impression blanc noir:</label>
-		<input type="text" name="impbn" class="be" required></div><br><br>
+		<input type="number" name="impbn" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Compt impression couleur:</label>
-		<input type="text" name="impc" class="be" required></div><br><br>
+		<input type="number" name="impc" class="be" required></div><br><br>
 
 		<div class="si">
 		<input class="pp" type="submit" name="enregistrer" value="ENREGISTRER" >	
@@ -130,15 +130,10 @@
 	<?php 
 		if (isset($_GET['enregistrer'])) {
     			
- 					$rep = $bdd->prepare('INSERT INTO poi(nomimp,prixphbn,prixphcoul,priximprbn,priximprcoul) VALUES(?,?,?,?,?)');
-  					$rep->execute(Array($_GET['nom'], $_GET['pbn'],$_GET['ppc'],$_GET['ibn'],$_GET['pic']));
+ 					$rep = $bdd->prepare('INSERT INTO poin(nomimp,photobn,photocoul,impbn,impcoul) VALUES(?,?,?,?,?)');
+  					$rep->execute(Array($_GET['nom'], $_GET['phbn'],$_GET['phc'],$_GET['impbn'],$_GET['impc']));
   		}	
 	 ?>
-	</div>
-
-
-
-	<label>codFil:</label>
-			
+	</div>			
 </body>
 </html>

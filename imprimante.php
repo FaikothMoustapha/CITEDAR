@@ -69,26 +69,6 @@
 			flex-direction: row;
 			justify-content: space-around;
 		}
-		a:hover{
-			background-color:red;
-			color: white;
-
-		}
-		.dd li{
-			height: 32px; 
-			padding: 5px; 
-			color: white;
-			list-style-type: none;
-		}
-		.dd li a{
-			text-decoration: none;
-			margin: auto;
-			font-weight: bold;
-		}
-		header{
-			background-color: grey;
-		}
-		
 	</style>
 </head>
 <body>
@@ -108,19 +88,19 @@
 		<h2>ENREGISTREMENT D'UNE IMPRIMANTE</h2><br><br>
 		<div class="re">
 		<label>NOM IMPRIMANTE:</label>
-		<input type="text" name="nom" class="be" required></div><br><br>
+		<input type="number" name="nom" class="be" required></div><br><br>
 		<div class="re">
 		<label>Prix photocopie blanc noir:</label>
-		<input type="text" name="pbn" class="be" required></div><br><br>
+		<input type="number" name="pbn" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Prix photocopie couleur:</label>
-		<input type="text" name="ppc" class="be" required></div><br><br>
+		<input type="number" name="ppc" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Prix impression blanc noir:</label>
-		<input type="text" name="ibn" class="be" required></div><br><br>
+		<input type="number" name="ibn" class="be" required></div><br><br>
 		<div class="re">
 	    <label>Prix impression couleur:</label>
-		<input type="text" name="pic" class="be" required></div><br><br>
+		<input type="number" name="pic" class="be" required></div><br><br>
 
 		<div class="si">
 		<input class="pp" type="submit" name="enregistrer" value="ENREGISTRER" >	
